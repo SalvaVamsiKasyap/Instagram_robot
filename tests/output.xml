@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.5 on win32)" generated="20221124 23:56:41.396" rpa="false" schemaversion="3">
+<suite id="s1" name="Custom Keyword" source="C:\Users\Lenovo\PycharmProjects\robot_frame_work\tests\custom_keyword.robot">
+<test id="s1-t1" name="Searching the profiles in instagram" line="34">
+<kw name="open the browser with mortgage payment url" library="resource" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20221124 23:56:41.741" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20221124 23:56:41.741" endtime="20221124 23:56:43.601"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221124 23:56:43.601" level="INFO">Opening url 'https://www.instagram.com/direct/inbox/?next=%2F'</msg>
+<status status="PASS" starttime="20221124 23:56:43.601" endtime="20221124 23:56:45.617"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221124 23:56:45.617" endtime="20221124 23:56:45.826"/>
+</kw>
+<status status="PASS" starttime="20221124 23:56:41.741" endtime="20221124 23:56:45.826"/>
+</kw>
+<kw name="Fill the login form">
+<arg>${valid_user_name}</arg>
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>xpath://input[@name='username']</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20221124 23:56:45.826" endtime="20221124 23:56:46.798"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://input[@name='username']</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221124 23:56:46.798" level="INFO">Typing text 'vamsi_kasyap' into text field 'xpath://input[@name='username']'.</msg>
+<status status="PASS" starttime="20221124 23:56:46.798" endtime="20221124 23:56:47.081"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>xpath://input[@aria-label='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221124 23:56:47.084" level="INFO">Typing password into text field 'xpath://input[@aria-label='Password']'.</msg>
+<msg timestamp="20221124 23:56:47.174" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221124 23:56:47.325" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221124 23:56:47.082" endtime="20221124 23:56:47.325"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221124 23:56:47.325" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20221124 23:56:47.325" endtime="20221124 23:56:47.514"/>
+</kw>
+<status status="PASS" starttime="20221124 23:56:45.826" endtime="20221124 23:56:47.515"/>
+</kw>
+<kw name="select options on home page">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='x1n2onr6']</arg>
+<arg>15</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221124 23:56:47.515" endtime="20221124 23:56:52.683"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${available_options}</var>
+<arg>//div[@class='x6s0dn4 x9f619 xxk0z11 x6ikm8r xeq5yr9 x1s85apg x1swvt13 xzzcqpx']/div</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20221124 23:56:52.708" level="INFO">${available_options} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="89bf0cd14f8ab75100df2e2f7cfdffdd", element="a3eca456-c922-4423-ace9-afb452516bdf")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20221124 23:56:52.685" endtime="20221124 23:56:52.708"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${list_len}</var>
+<arg>${available_options}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20221124 23:56:52.708" level="INFO">Length is 8</msg>
+<msg timestamp="20221124 23:56:52.708" level="INFO">${list_len} = 8</msg>
+<status status="PASS" starttime="20221124 23:56:52.708" endtime="20221124 23:56:52.708"/>
+</kw>
+<kw name="Hello World">
+<msg timestamp="20221124 23:56:52.715" level="FAIL">No keyword with name 'Hello World' found.</msg>
+<status status="FAIL" starttime="20221124 23:56:52.715" endtime="20221124 23:56:52.715"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${list_len}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20221124 23:56:52.715" endtime="20221124 23:56:52.715"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${index}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20221124 23:56:52.715" endtime="20221124 23:56:52.715"/>
+</kw>
+<for flavor="IN">
+<var>${li_le}</var>
+<value>@{available_options}</value>
+<iter>
+<var name="${li_le}"/>
+<kw name="Log" library="BuiltIn">
+<arg>${li_le.text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20221124 23:56:52.715" endtime="20221124 23:56:52.715"/>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<arg>'${li_le.text}' == '${card_title}'</arg>
+<doc>Stops executing the enclosing FOR loop if the ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20221124 23:56:52.715" endtime="20221124 23:56:52.715"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${index}</var>
+<arg>${index} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20221124 23:56:52.715" endtime="20221124 23:56:52.715"/>
+</kw>
+<status status="NOT RUN" starttime="20221124 23:56:52.715" endtime="20221124 23:56:52.715"/>
+</iter>
+<status status="NOT RUN" starttime="20221124 23:56:52.715" endtime="20221124 23:56:52.715"/>
+</for>
+<kw name="Log" library="BuiltIn">
+<arg>${index}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20221124 23:56:52.715" endtime="20221124 23:56:52.715"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${options}</var>
+<arg>xpath://div[@class='x1n2onr6']/a[@class="x1i10hfl xjbqb8w x6umtig x1b1mbwd xaqea5y xav7gou x9f619 x1ypdohk xt0psk2 xe8uvvx xdj266r x11i5rnm xat24cr x1mh8g0r xexx8yu x4uap5 x18d9i69 xkhd6sd x16tdsg8 x1hl2dhg xggy1nq x1a2a7pz _a6hd"]</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="NOT RUN" starttime="20221124 23:56:52.715" endtime="20221124 23:56:52.723"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${options}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20221124 23:56:52.723" endtime="20221124 23:56:52.723"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${mess_age}</var>
+<arg>${options}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="NOT RUN" starttime="20221124 23:56:52.723" endtime="20221124 23:56:52.723"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${mess_age}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221124 23:56:52.723" endtime="20221124 23:56:52.723"/>
+</kw>
+<status status="FAIL" starttime="20221124 23:56:47.515" endtime="20221124 23:56:52.723"/>
+</kw>
+<kw name="providing the profile name that is needed to be searched">
+<arg>${profile_name}</arg>
+<status status="NOT RUN" starttime="20221124 23:56:52.723" endtime="20221124 23:56:52.723"/>
+</kw>
+<kw name="close browser session" library="resource" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221124 23:56:52.723" endtime="20221124 23:56:55.071"/>
+</kw>
+<status status="PASS" starttime="20221124 23:56:52.723" endtime="20221124 23:56:55.071"/>
+</kw>
+<status status="FAIL" starttime="20221124 23:56:41.741" endtime="20221124 23:56:55.071">No keyword with name 'Hello World' found.</status>
+</test>
+<doc>To validate the login form</doc>
+<status status="FAIL" starttime="20221124 23:56:41.412" endtime="20221124 23:56:55.071"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Custom Keyword">Custom Keyword</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221124 23:56:41.725" level="ERROR">Error in file 'C:\Users\Lenovo\PycharmProjects\robot_frame_work\tests\custom_keyword.robot' on line 5: Importing library 'C:\Users\Lenovo\PycharmProjects\robot_frame_work\customLibraries\insta_options.py' failed: SyntaxError: invalid syntax (insta_options.py, line 19)
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Lenovo\PycharmProjects\robot_frame_work\customLibraries
+  C:\Users\Lenovo\PycharmProjects\robot_frame_work\venv\Scripts\robot.exe
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python310
+  C:\Users\Lenovo\PycharmProjects\robot_frame_work\venv
+  C:\Users\Lenovo\PycharmProjects\robot_frame_work\venv\lib\site-packages</msg>
+</errors>
+</robot>
